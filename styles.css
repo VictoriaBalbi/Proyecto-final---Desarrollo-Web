@@ -115,8 +115,29 @@ main{
     text-decoration: underline;
 
     font-size: 0.8vw;  
+    /* animacion para la info */
+    /* aparece más grande desde arriba*/
+    animation: info 2s;
+
 }
 
+@keyframes info {
+    0% {
+        opacity: 0;
+        /* negativos mueven hacia arriba */
+        transform: scale(1.5) translateY(-0.75em);
+      }
+      20% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        transform: translateZ(-1000em);
+      }
+}
 
 /*clase menu-logo tiene la imagen logo y el nav*/
 .menu-logo{
@@ -149,10 +170,14 @@ main{
     
     font-weight: bolder;
 }
-
-/* agrandar el enlance donde posiciono el mouse */
+.menu a{
+    transition: all 2s;
+}
+/* agrandar el enlance donde posiciono el mouse con transform */
 .menu a:hover{
-    font-size: 1.7vw;
+    /* para usar scale el elemento no debe ser en linea */
+    display:inline-block;
+    transform: scale(1.2);
     border-bottom: #31AFB4 2px solid;
 }
 
@@ -163,6 +188,7 @@ main{
 .imagen-inicio {
     /* pongo la imagen de fondo */
     background-image: url(multimedia/imagen-inicio.jpg);
+    animation: opacidad-imagen 3s;
     background-size: cover;
     height:83vh;
     /*para que ocupe toda la pantalla*/
@@ -173,15 +199,52 @@ main{
     align-items: center;
 
  }
-
+ 
+ @keyframes opacidad-imagen {
+    0% {
+        opacity: 0.6;
+      }
+    25% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    75% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+      }
+ }
  .imagen-inicio h1{
     font-family: 'Montserrat', sans-serif;
     color: white;
     font-size: 4vw;
     text-transform: uppercase;
     text-align: center;
+    /* animacion para que aparezca desde la izquierda */
+    animation: fromLeft 3s;
     
  }
+
+ @keyframes fromLeft {
+    0% {
+        opacity: 0;
+        /* negativos mueven hacia arriba */
+        transform: scale(1.5) translateX(-100%);
+      }
+      20% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        transform: translateZ(-1000em);
+      }
+}
 /*FIN IMAGEN DE INICIO*/
 
 /*NOSOTROS Y CONTACTO*/
@@ -209,7 +272,6 @@ main{
 /*como quiero el fondo de distinto color en contacto debo diferenciar los colores de letra segun la clase*/
 #nosotros {
     color: white;
-
     /*para evitar que el header me tape la seccion al clickear el enlace pongo un scroll-margin-top*/
     scroll-margin-top: 15vh;
   
@@ -217,9 +279,7 @@ main{
 
 #contacto {
     background-color: white;
- 
     color:#31AFB4;
-
 }
 
 #nosotros h2 {
@@ -228,7 +288,9 @@ main{
     color: white;
     padding: 5%;
     font-size: 1.8vw;
+       
 }
+
 
 #contacto h2 {
     font-family: 'Montserrat', sans-serif;
@@ -253,7 +315,7 @@ main{
 }  
 .contacto-mapa iframe{
    padding: 0% 10%;
-   
+     
 }
 
 .texto-prof ul{
@@ -354,7 +416,7 @@ footer a {
     color: #FFFFFF;
     text-align: center;
     line-height: 6;
-
+    transition: all 3s;
 }
 
 
@@ -365,8 +427,27 @@ footer a {
 
 /*le doy tamaño a los iconos*/
 .lista-servicios i {
-    font-size: 2vw;
+    font-size: 3vw;
+    animation: giro-iconos 1s;
 }
+
+@keyframes giro-iconos {
+    0% {
+        transform: rotate(0deg);
+        /* transition: all 1s; */
+    }
+  
+    50% {
+        transform: rotate(180deg);
+        /* transition: all 1s; */
+    }
+  
+    100%{
+        transform: rotate(360deg);
+        /* transition: all 1s; */
+    }
+}
+
 
 /* FIN SERVICIOS -------------------------------------------------- */
 
