@@ -19,6 +19,10 @@ blanco: #FFFFFF
     
 }
 
+.bg-blanco{
+    background-color: white;
+}
+
 html {
     /* para referenciar el position del footer */
     min-height: 100%;
@@ -71,50 +75,14 @@ p {
 
 main{
     /* pongo un margen inf para que el footer no me tape el main */
-    margin-bottom: 10vh; 
+   /* margin-bottom: 10vh; */
    
 }
 
 /*ESTILO DEL HEADER*/
-/*a la clase cabecera le defino el color y el alto/ancho*/
-.cabecera{
-
-    background-color: white;
-    /*color del texto*/
-    color: #31AFB4;
-    /* el ancho y alto es acorde a la pantalla → uso vh y vw */
-    height: auto;
-    width: 100vw;
-
-    /* posiciono la cabecera siempre arriba, aunque scrollee sigue arriba */
-    /* uso sticky para conservar el lugar */
-    position: sticky;
-    /* le digo que cuando la parte de arriba llegue al pixel cero (del body--> su padre) quede fijo */
-    top: 0;
-
-    /* borde inf */
-    border-bottom: 2px solid #31AFB4;
-     
-}
 
 /*la clase informacion tiene los datos que quiero poner en la primer linea de la pag*/
 .informacion {
-    height: 10%; /*la altura la quiero del tamaño del texto*/
-    width: 100vw; /*todo el ancho de la pantalla*/
-    padding-top: 1vh;
-
-    /*uso flexbox con direccion ROW por default*/
-    display: flex;
-    /*wrap para que si se achica la pantalla se muevan los elementos*/
-    flex-wrap: wrap;
-    
-    /*ubico a los hijos al principio y con un espacio entre ellos*/
-    justify-content: space-around;
-    align-items: flex-start;
-
-    text-decoration: underline;
-
-    font-size: 0.8vw;  
     /* animacion para la info */
     /* aparece más grande desde arriba*/
     animation: info 2s;
@@ -139,66 +107,15 @@ main{
       }
 }
 
-/*clase menu-logo tiene la imagen logo y el nav*/
-.menu-logo{
-    padding: 1vh 3%;
- 
-    /*uso de flexbox para organizar*/
-    /*los movimiento que haga van a ser respescto a los dos elementos hijos, el logo y el nav*/
-    display:grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 3fr;
-    column-gap: 10px; /* espacio entre columnas */
-
-    height: 90%;
-    width: 100%;
-    
-
-}
-
-
-.logo img {
-    object-fit: cover;
-
-}
- 
-.menu {
-    padding: 2% 0 ;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    
-    font-weight: bolder;
-}
-.menu a{
-    transition: all 2s;
-}
-/* agrandar el enlance donde posiciono el mouse con transform */
-.menu a:hover{
-    /* para usar scale el elemento no debe ser en linea */
-    display:inline-block;
-    transform: scale(1.2);
-    border-bottom: #31AFB4 2px solid;
-}
-
 /*FIN ESTILO DEL HEADER*/
 
 /*IMAGEN DE INICIO*/
 /*css para la imagen dentro de la seccion*/
-.imagen-inicio {
-    /* pongo la imagen de fondo */
-    background-image: url(multimedia/imagen-inicio.jpg);
-    animation: opacidad-imagen 3s;
-    background-size: cover;
-    height:83vh;
-    /*para que ocupe toda la pantalla*/
-    width: 100vw;
-    
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.imagen-inicio h1{
+    color: white;
+    font-size: 4vw;
+}
 
- }
  
  @keyframes opacidad-imagen {
     0% {
@@ -217,12 +134,11 @@ main{
         opacity: 1;
       }
  }
- .imagen-inicio h1{
+.subtitulo-imagen{
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    
     font-size: 4vw;
-    text-transform: uppercase;
-    text-align: center;
+    
     /* animacion para que aparezca desde la izquierda */
     animation: fromLeft 3s;
     
@@ -280,6 +196,7 @@ main{
 #contacto {
     background-color: white;
     color:#31AFB4;
+    padding-bottom: 5%;
 }
 
 #nosotros h2 {
@@ -328,15 +245,10 @@ main{
 footer{
     background-color: #31AFB4;
     /* el ancho y alto es acorde a la pantalla → uso vh y vw */
-    /* height: fit-content; */
+    height: fit-content;
     width: 100vw;
-    display: grid;
-    
-    grid-template-rows: 100%; 
-    grid-template-columns: 20% 80%;
-    align-items: center;
- 
-    
+      
+
     /* fuente */
     color:#FFFFFF;
 
@@ -350,103 +262,31 @@ footer{
 
 .footer-info {
     
-    padding: 10px 25px;
-    font-size: 0.6vw;
-      
-}
-
-.footer-menu {
-      
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-           
+    flex-direction: row;
+    
+    justify-content: space-evenly;
+    font-size: 0.8vw;
+      
 }
 
-footer a {
-    color: white;
-    font-size: 0.9vw;
-}
+
 
 /* FIN FOOTER ---------------------------------------------------------- */
 
 /* SERVICIOS */
 
-.contenido-servicios {
-   
-    width: 100vw;
-    /* habilito GRID */
-    display: grid;
-    
-    /* Definimos filas */
-    grid-template-rows: 20% 80% ; /*le digo cantidad de filas y alto de la fila*/
-    /* Definimos columnas */
-    grid-template-columns: 100%;
-    
-
-}
-
-.contenido-servicios h2{
-    
+.contenido-servicios h1 {
+    padding: 3%;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    /* para que me quede separado de la lista le agrego un padding */
-    padding: 25px;
-    font-size: 2.2vw;
-    width: 100vw;
-    color: #FFFFFF;
+    color: white;
+
+    font-size: 1.8vw;
     text-align: center;
+
 }
 
-.lista-servicios {
-    margin: 0 5%;
-
-    display: grid;
-    /* Definimos filas */
-    grid-template-rows: repeat(2,50%); /*le digo cantidad de filas y alto de la fila */
-    /* Definimos columnas */
-    grid-template-columns: repeat(2,50%); 
-
-    column-gap: 10px; /* espacio entre columnas */
-    row-gap: 10px; /* espacio entre filas */ 
-   
-    
-
-    color: #FFFFFF;
-    text-align: center;
-    line-height: 6;
-    transition: all 3s;
-}
-
-
-.lista-servicios li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2vw;
-}
-
-/*le doy tamaño a los iconos*/
-.lista-servicios i {
-    font-size: 3vw;
-    animation: giro-iconos 1s;
-}
-
-@keyframes giro-iconos {
-    0% {
-        transform: rotate(0deg);
-        /* transition: all 1s; */
-    }
-  
-    50% {
-        transform: rotate(180deg);
-        /* transition: all 1s; */
-    }
-  
-    100%{
-        transform: rotate(360deg);
-        /* transition: all 1s; */
-    }
-}
 
 
 /* FIN SERVICIOS -------------------------------------------------- */
@@ -520,5 +360,9 @@ footer a {
 
 .vtabs .vtab-content div {
     display: none;
+}
+
+.vtab-content h2 {
+    font-size: 2.8vw;
 }
 /* FIN PREGUNTAS FREC --------------------------------------------- */

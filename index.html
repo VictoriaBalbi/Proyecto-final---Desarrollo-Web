@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link al archivo de CSS -->
+    <!-- Conexion al servidor donde estan los estilos CSS de Bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- link a mi CSS -->
     <link rel="stylesheet" href="styles.css">
 
     <!-- Nombre de la pestaña -->
@@ -13,36 +16,45 @@
 </head>
 <body class="body-verde">
     <!-- Header -->
-    <header class="cabecera">
-        <!-- texto con informacion util para el usuario -->
-        <div class="informacion">
-            <p>Coronel Borges 848 - Junín, Buenos Aires</p>
-            <p>Telefono</p>
-            <p>Email</p>
-            <p>Facebook</p>
-        </div>
-        
-        <div class="menu-logo">
-            <!-- LOGO -->
-            <div class="logo">
-            <!--le pongo el anchor para que al clickear el logo me lleve al inicio-->
-               <a href="index.html"><img src="multimedia/logo2.jpeg" alt="logo" ></a> 
+    <header class="position-sticky top-0 bg-blanco" style="z-index:3;">
+        <div class="container" >
+            <div class="row">
+                <div class="col d-flex flex-row justify-content-between informacion" style="font-size: 0.8vw;" >
+                    <p>Coronel Borges 848 - Junín, Buenos Aires</p>
+                    <p>Telefono</p>
+                    <p>Email</p>
+                    <p>Facebook</p>
+                </div>
             </div>
-            
+        </div>
 
-            <!-- MENU -->
-            <div>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="#nosotros">Nosotros</a></li>
-                        <li><a href="pages/servicios.html">Servicios</a></li>
-                        <li> <a href="pages/preguntas.html">Preguntas Frecuentes</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+        <div class="container  pb-2 ">
+            <div class="row">
+                <div class="col-4">
+                    <img class="img-fluid" src="multimedia/logo2.jpeg" alt="logo">
+                </div>
+
+                <div class="col-8 ">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid d-flex justify-content-end ">
+                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav  d-flex justify-content-evenly " style="width:100%;">
+                                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+                                <a class="nav-link" href="#nosotros">NOSOTROS</a>
+                                <a class="nav-link" href="pages/servicios.html">SERVICIOS</a>
+                                <a class="nav-link" href="pages/preguntas.html">PREGUNTAS FRECUENTES</a>
+                                <a class="nav-link" href="#contacto">CONTACTO</a>
+                            </div>
+                          </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
         </div>
+       
     </header>
     <!-- Fin header -->
 
@@ -50,7 +62,44 @@
         <!-- Seccion para la imagen del inicio -->
     
         <section class="imagen-inicio">
-            <h1>Laboratorio de analisis clínicos</h1>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner" >
+                  <div class="carousel-item active " style="height: 80vh ;">
+                    <img class="img-fluid" src="multimedia/imagen-galeria2.jpg" class="d-block w-100" alt="tubos-ensayo">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5 class="fs-1 h5-negro fst-italic subtitulo-imagen" >Laboratorio de análisis clínicos</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="carousel-item" style="height: 80vh ;">
+                    <img class="img-fluid" src="multimedia/imagen-inicio2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fs-1 h5-verde fst-italic subtitulo-imagen" style="color:#31AFB4;">Extracciones a domicilio</h5>
+                      
+                    </div>
+                  </div>
+                  <div class="carousel-item" style="height: 80vh ;">
+                    <img class="img-fluid" src="multimedia/imagen-galeria3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="fs-1 h5-negro fst-italic subtitulo-imagen">Trato personalizado</h5>
+                      
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </section>
 
         <!-- Fin de la seccion inicio -->
@@ -115,21 +164,12 @@
             <p>Facebook</p>
         </div>
         
-        <!-- MENU -->
-        <div class="menu-foot">
-            <nav>
-                <ul class="footer-menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="pages/servicios.html">Servicios</a></li>
-                    <li> <a href="pages/preguntas.html">Preguntas Frecuentes</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+
     </footer>
 
     <!-- Fin footer -->
 
+    <!-- Conexion al servidor con las funciones de JS de Bootstrap → VA SIEMPRE DEBAJO DE TODO  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
