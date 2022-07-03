@@ -23,6 +23,10 @@ blanco: #FFFFFF
     background-color: white;
 }
 
+.bg-verde{
+    background-color:#31AFB4;
+}
+
 html {
     /* para referenciar el position del footer */
     min-height: 100%;
@@ -57,10 +61,8 @@ ul{
 
 /* estilo a las fuentes de los enlaces */
 a{
-    text-decoration: none;
-    color: #31AFB4;
     font-family: 'Montserrat', sans-serif;
-    font-size:1.5vw;
+   
     text-transform: uppercase;
    
     
@@ -83,6 +85,14 @@ p {
     animation: info 2s;
 
 }
+
+/* Agrandar el item del menu donde pongo el cursor */
+.navbar-nav a:hover {
+    transform: scale(1.2);
+    border-bottom: #31AFB4 2px solid;
+}
+
+
 
 @keyframes info {
     0% {
@@ -133,10 +143,12 @@ p {
     font-family: 'Montserrat', sans-serif;
     
     font-size: 4vw;
-    
-    /* animacion para que aparezca desde la izquierda */
+       
+ }
+
+ .mov-left {
+    /* animacion para que el 1er titulo aparezca desde la izquierda */
     animation: fromLeft 3s;
-    
  }
 
  @keyframes fromLeft {
@@ -156,6 +168,16 @@ p {
         transform: translateZ(-1000em);
       }
 }
+
+/* Ocultar imagen en mobile */
+@media only screen and (max-width:468px){
+    .imagen-inicio{
+        display: none;
+    }
+
+}
+
+
 /*FIN IMAGEN DE INICIO*/
 
 /*NOSOTROS Y CONTACTO*/
@@ -208,7 +230,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color:#31AFB4;
-    padding: 25px;
+    padding: 3%;
     font-size: 1.8vw;
 }
 
@@ -221,12 +243,25 @@ p {
     align-items: center;
 
     font-size: 1vw;
-    
-    
-     
+ 
 }  
+
+@media only screen and (max-width:468px){
+    #contacto div {
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    #nosotros{
+        scroll-margin-top: 50vh;
+    }
+}
+
+
 .contacto-mapa iframe{
    padding: 0% 10%;
+   /* width: 100%;
+   height: 100%; */
      
 }
 
@@ -238,7 +273,6 @@ p {
 /* FOOTER -------------------------------------------------------------- */
 
 footer{
-    background-color: #31AFB4;
     /* el ancho y alto es acorde a la pantalla → uso vh y vw */
     height: fit-content;
     width: 100vw;
@@ -261,7 +295,7 @@ footer{
     flex-direction: row;
     
     justify-content: space-evenly;
-    font-size: 0.8vw;
+    font-size: 1vw;
       
 }
 
@@ -277,9 +311,31 @@ footer{
     text-transform: uppercase;
     color: white;
 
-    font-size: 1.8vw;
+    font-size: 3vw;
     text-align: center;
 
+}
+
+@media only screen and (max-width:468px){
+    .galeria-serv {
+        /* para centrar */
+        margin: 2%;
+    }
+    .galeria-serv div{
+        margin: 2%;
+      
+    }
+}
+
+@media only screen and (min-width: 469px) and (max-width:960px){
+    .galeria-serv {
+        /* para centrar */
+        margin: 2%;
+    }
+    .galeria-serv div{
+        margin-bottom: 3%;
+      
+    }
 }
 
 
