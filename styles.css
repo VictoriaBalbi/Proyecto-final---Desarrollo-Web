@@ -252,10 +252,15 @@ p {
         margin-bottom: 5%;
     }
 
+}
+
+@media only screen and (max-width:994px){
+   /* cuando se colapsa el menu no quiero que me tape la seccion al bajar → aumento el scroll margin top */
     #nosotros{
-        scroll-margin-top: 50vh;
+        scroll-margin-top: 45vh;
     }
 }
+
 
 
 .contacto-mapa iframe{
