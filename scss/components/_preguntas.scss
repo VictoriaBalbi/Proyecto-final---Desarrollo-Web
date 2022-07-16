@@ -9,6 +9,7 @@
     
 
     .vtabs {
+       
         /* posiciono mi clase vtabs para que quede verticalmente del lado izq */
         max-width: 80vw;
         padding: 20px;
@@ -39,13 +40,13 @@
     
             /* resalto el borde izquierdo */
             border-left: 5px solid $main_color_verde;
-    
+                
             &:hover{
                 /* al posicionar el mouse en una label quiero que cambie de color */
                 cursor: pointer;
                 color: $color_secundario;  
             }
-    
+
         
         }
     }
@@ -68,14 +69,18 @@
     }
     
     .vtabs .vtab-content {
-    
+        @media only screen and (max-width:468px){
+            font-size: 0.8rem;
+            
+        }
+
         position:absolute;
         top:0px;
         width: 50%;
         left: 25vw;
     
         color: $color_secundario;
-        font-family: $main_font;
+        font-family: $text_font;
         font-size: 1vw;
         line-height: 2.5;
         text-align: center;
@@ -100,18 +105,20 @@
                 font-size: 1.2vw;
                 font-weight: bolder;
                 text-decoration: none;
+                @media only screen and (max-width:468px){
+                    font-size: 0.9rem;
+                    
+                }
             }
         }
     
-        @media only screen and (max-width:468px){
-            font-size: 0.8rem;
-           text-align: left;
-        }
+    
        
     }
     
     .vtabs .vtab-content div {
         display: none;
+        
     }
     
     

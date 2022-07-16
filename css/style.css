@@ -7,6 +7,7 @@ blanco: #FFFFFF
 /*Importo archivos base*/
 /* fuente monserrat (font-family: 'Montserrat', sans-serif;) */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 /*Colores de la pagina*/
 /*Mixin para flex*/
 /* Extends */
@@ -130,7 +131,7 @@ header .navbar-nav a:hover {
   height: 25%;
   display: flex;
   width: 100vw;
-  font-family: "Arial, Helvetica, sans-serif";
+  font-family: "Roboto Slab", serif;
   /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
   padding: 1% 5%;
   /*separo los divs equidistantemente en el eje X*/
@@ -174,7 +175,7 @@ header .navbar-nav a:hover {
 #nosotros .texto-prof ul {
   list-style: square;
   color: white;
-  font-family: "Arial, Helvetica, sans-serif";
+  font-family: "Roboto Slab", serif;
 }
 #nosotros .texto-prof ul li {
   padding: 1.5% 0%;
@@ -190,7 +191,7 @@ header .navbar-nav a:hover {
   height: 25%;
   display: flex;
   width: 100vw;
-  font-family: "Arial, Helvetica, sans-serif";
+  font-family: "Roboto Slab", serif;
   /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
   padding: 1% 5%;
   /*separo los divs equidistantemente en el eje X*/
@@ -303,10 +304,15 @@ header .navbar-nav a:hover {
   width: 50%;
   left: 25vw;
   color: purple;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto Slab", serif;
   font-size: 1vw;
   line-height: 2.5;
   text-align: center;
+}
+@media only screen and (max-width: 468px) {
+  .contenido-preg .vtabs .vtab-content {
+    font-size: 0.8rem;
+  }
 }
 .contenido-preg .vtabs .vtab-content h2 {
   font-size: 1.8vw;
@@ -330,9 +336,8 @@ header .navbar-nav a:hover {
   text-decoration: none;
 }
 @media only screen and (max-width: 468px) {
-  .contenido-preg .vtabs .vtab-content {
-    font-size: 0.8rem;
-    text-align: left;
+  .contenido-preg .vtabs .vtab-content button a {
+    font-size: 0.9rem;
   }
 }
 .contenido-preg .vtabs .vtab-content div {
@@ -348,6 +353,11 @@ header .navbar-nav a:hover {
   color: white;
   font-size: 3vw;
   text-align: center;
+}
+@media only screen and (max-width: 468px) {
+  .contenido-servicios h1 {
+    font-size: 0.9rem;
+  }
 }
 .contenido-servicios img {
   width: 100%;
@@ -376,7 +386,7 @@ header .navbar-nav a:hover {
 /* FOOTER -------------------------------------------------------------- */
 footer {
   /* el ancho y alto es acorde a la pantalla → uso vh y vw */
-  height: fit-content;
+  height: auto;
   width: 100vw;
   /* fuente */
   color: white;
@@ -446,6 +456,7 @@ html {
   /*me queda la barra para scrollear horizontalmente y nose como sacarla ¿?*/
   /*defino el ancho del contenedor mas grande como el 100 de la pantalla*/
   max-width: 100%;
+  min-height: 100%;
 }
 
 .body-blanco {
@@ -453,8 +464,7 @@ html {
   /*me queda la barra para scrollear horizontalmente y nose como sacarla ¿?*/
   /*defino el ancho del contenedor mas grande como el 100 de la pantalla*/
   max-width: 100%;
+  min-height: 100%;
 }
-
-/* estilo a las fuentes de los parrafos */
 
 /*# sourceMappingURL=style.css.map */
