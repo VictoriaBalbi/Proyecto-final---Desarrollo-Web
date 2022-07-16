@@ -27,14 +27,14 @@ footer{
         } 
     }
 
-    & a{
-        text-decoration: none;
-        color: $color_base;
-        font-family: $main_font;
-        font-weight: lighter;
-        @media only screen and (max-width:468px){
-            font-size: 0.4rem;
-            
+        & a{
+            text-decoration: none;
+            color: $color_base;
+            font-family: $main_font;
+            font-weight: lighter;
+            @media only screen and (max-width:468px){
+                font-size: 0.4rem;
+                
         } 
 
         &:hover{
