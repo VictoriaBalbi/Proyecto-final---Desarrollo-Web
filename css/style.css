@@ -38,7 +38,7 @@ header .informacion {
 }
 header .informacion a {
   text-decoration: none;
-  color: black;
+  color: #31AFB4;
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
 }
@@ -53,10 +53,11 @@ header .informacion a:hover {
 header .informacion p {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
+  color: #31AFB4;
 }
 @media only screen and (max-width: 468px) {
   header .informacion p {
-    font-size: 0.4rem;
+    font-size: 0.3rem;
   }
 }
 @keyframes info {
@@ -317,6 +318,7 @@ header .navbar-nav a:hover {
 .contenido-preg .vtabs .vtab-content h2 {
   font-size: 1.8vw;
   padding: 1.5%;
+  font-weight: 800;
 }
 @media only screen and (max-width: 468px) {
   .contenido-preg .vtabs .vtab-content h2 {

@@ -4,10 +4,11 @@ header{
   .informacion {
     /* animacion para la info */
     /* aparece más grande desde arriba*/
+    
     animation: info 2s;
     & a{
       text-decoration: none;
-      color: black;
+      color: $main_color_verde;
       font-family: $main_font;
       font-weight: lighter;
 
@@ -24,9 +25,10 @@ header{
     p {
       font-family: $main_font;
       font-weight: lighter;
+      color: $main_color_verde;
 
       @media only screen and (max-width:468px){
-        font-size: 0.4rem;
+        font-size: 0.3rem;
       } 
       
     }
