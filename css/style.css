@@ -173,6 +173,9 @@ header .navbar-nav a:hover {
     margin-bottom: 5%;
   }
 }
+#nosotros .texto-nos {
+  width: 80%;
+}
 #nosotros .texto-prof ul {
   list-style: square;
   color: white;
