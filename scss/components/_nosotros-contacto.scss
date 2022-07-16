@@ -1,0 +1,164 @@
+/*NOSOTROS Y CONTACTO*/
+/* seccion nosotros (ES UN ID) → quiero dos columnas */
+/* la seccion contacto la quiero igual asi que reutilizo el codigo */
+#nosotros {
+    
+    height: 25%;
+    display: flex;
+    width: 100vw;
+
+    font-family: $text_font;
+
+    /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
+    padding: 1% 5%;
+    /*separo los divs equidistantemente en el eje X*/
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+    text-align: map-get($parrafo, alineacion);
+    line-height: map-get($parrafo, interlineado);
+
+    // background-color: $color_base;
+    // color:$main_color_verde;
+    padding-bottom: 5%;
+
+     color: $color_base;
+    // /*para evitar que el header me tape la seccion al clickear el enlace pongo un scroll-margin-top*/
+    scroll-margin-top: 15vh;
+
+    & h2{
+        @extend %h2_standard;
+        padding: 5%;
+        @media only screen and (max-width:468px){
+            font-size: 1.1rem;
+        }
+    }
+
+    & div {
+        /*ancho del 50% del contenedor para que tengan el mismo ancho cada div*/
+        width: 50%;
+        /*flexbox para centrar el contenido*/
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        font-size: 1.4vw;
+
+        @media only screen and (max-width:468px){
+            font-size: 1rem;
+            padding: 0% 2%;
+        }
+
+         // una sola columna en mobile
+        @media only screen and (max-width:468px){
+            width: 100%;
+            margin-bottom: 5%;
+        }
+    } 
+
+    
+    
+    .texto-prof ul{
+        list-style:square;
+        color: $color_base;
+        font-family: $text_font;
+        & li{
+            padding: 1.5% 0% ;
+        }
+    }
+
+    @media only screen and (max-width:994px){
+        /* cuando se colapsa el menu no quiero que me tape la seccion al bajar → aumento el scroll margin top */
+        scroll-margin-top: 45vh;
+         
+    }
+           
+}
+
+#contacto {
+    
+    height: 25%;
+    display: flex;
+    width: 100vw;
+
+    font-family: $text_font;
+
+    /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
+    padding: 1% 5%;
+    /*separo los divs equidistantemente en el eje X*/
+    justify-content: space-evenly;
+
+    flex-wrap: wrap;
+
+    text-align: map-get($parrafo, alineacion);
+    line-height: map-get($parrafo, interlineado);
+
+    background-color: $color_base;
+    color:$main_color_verde;
+    padding-bottom: 5%;
+
+    & h2 {
+        @extend %h2_standard;
+        padding: 3%;
+
+        @media only screen and (max-width:468px){
+            font-size: 1.1rem;
+        }
+    }
+
+    & h3 {
+        @extend %h3_standard;
+        padding: 5%;  
+        
+        @media only screen and (max-width:468px){
+            font-size: 3vw;
+        }
+    }
+
+    & div {
+         /*ancho del 50% del contenedor para que tengan el mismo ancho cada div*/
+        width: 50%;
+        /*flexbox para centrar el contenido*/
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        font-size: 1.4vw;
+        & ul {
+            list-style: none;
+            & li{
+                padding: 0.5vw;
+            }
+        }
+       
+        /* Font size en mobile */
+        @media only screen and (max-width:468px){
+            font-size: 1rem;
+        }
+
+        @media only screen and (max-width:468px){
+            width: 100%;
+            margin-bottom: 5%;
+        }
+    }
+
+    .contacto-mapa iframe{
+        padding: 0% 10%;
+
+    }
+  
+}
+
+            
+
+
+
+
+
+
+
+
+
+
+

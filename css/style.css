@@ -1,0 +1,460 @@
+@charset "UTF-8";
+/* 
+COLORES
+verde agua: #31AFB4
+blanco: #FFFFFF
+*/
+/*Importo archivos base*/
+/* fuente monserrat (font-family: 'Montserrat', sans-serif;) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+/*Colores de la pagina*/
+/*Mixin para flex*/
+/* Extends */
+/*Sintaxis: % + nombre { las propiedades } */
+#contacto h2, #nosotros h2 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.8vw;
+}
+
+#contacto h3 {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 1.4vw;
+}
+
+/*Mapa*/
+/*Importo archivos de componentes de mi pag*/
+/*ESTILO DEL HEADER*/
+header {
+  /*la clase informacion tiene los datos que quiero poner en la primer linea de la pag*/
+  /* Agrandar el item del menu donde pongo el cursor */
+}
+header .informacion {
+  /* animacion para la info */
+  /* aparece más grande desde arriba*/
+  animation: info 2s;
+}
+header .informacion a {
+  text-decoration: none;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 468px) {
+  header .informacion a {
+    font-size: 0.4rem;
+  }
+}
+header .informacion a:hover {
+  color: blue;
+}
+header .informacion p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 468px) {
+  header .informacion p {
+    font-size: 0.4rem;
+  }
+}
+@keyframes info {
+  0% {
+    opacity: 0;
+    /* negativos mueven hacia arriba */
+    transform: scale(1.5) translateY(-0.75em);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: translateZ(-1000em);
+  }
+}
+header .navbar-nav a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+header .navbar-nav a:hover {
+  transform: scale(1.2);
+  border-bottom: #31AFB4 2px solid;
+}
+
+/*FIN ESTILO DEL HEADER*/
+/*IMAGEN DE INICIO*/
+/*css para la imagen dentro de la seccion*/
+.imagen-inicio {
+  background-color: white;
+  /* Ocultar imagen en mobile */
+}
+.imagen-inicio subtitulo-imagen {
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vw;
+}
+.imagen-inicio mov-left {
+  /* animacion para que el 1er titulo aparezca desde la izquierda */
+  animation: fromLeft 3s;
+}
+@keyframes fromLeft {
+  0% {
+    opacity: 0;
+    /* negativos mueven hacia arriba */
+    transform: scale(1.5) translateX(-100%);
+  }
+  20% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    transform: translateZ(-1000em);
+  }
+}
+@media only screen and (max-width: 468px) {
+  .imagen-inicio {
+    display: none;
+  }
+}
+
+/*FIN IMAGEN DE INICIO*/
+/*NOSOTROS Y CONTACTO*/
+/* seccion nosotros (ES UN ID) → quiero dos columnas */
+/* la seccion contacto la quiero igual asi que reutilizo el codigo */
+#nosotros {
+  height: 25%;
+  display: flex;
+  width: 100vw;
+  font-family: "Arial, Helvetica, sans-serif";
+  /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
+  padding: 1% 5%;
+  /*separo los divs equidistantemente en el eje X*/
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: justify;
+  line-height: 1.6;
+  padding-bottom: 5%;
+  color: white;
+  scroll-margin-top: 15vh;
+}
+#nosotros h2 {
+  padding: 5%;
+}
+@media only screen and (max-width: 468px) {
+  #nosotros h2 {
+    font-size: 1.1rem;
+  }
+}
+#nosotros div {
+  /*ancho del 50% del contenedor para que tengan el mismo ancho cada div*/
+  width: 50%;
+  /*flexbox para centrar el contenido*/
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 1.4vw;
+}
+@media only screen and (max-width: 468px) {
+  #nosotros div {
+    font-size: 1rem;
+    padding: 0% 2%;
+  }
+}
+@media only screen and (max-width: 468px) {
+  #nosotros div {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+#nosotros .texto-prof ul {
+  list-style: square;
+  color: white;
+  font-family: "Arial, Helvetica, sans-serif";
+}
+#nosotros .texto-prof ul li {
+  padding: 1.5% 0%;
+}
+@media only screen and (max-width: 994px) {
+  #nosotros {
+    /* cuando se colapsa el menu no quiero que me tape la seccion al bajar → aumento el scroll margin top */
+    scroll-margin-top: 45vh;
+  }
+}
+
+#contacto {
+  height: 25%;
+  display: flex;
+  width: 100vw;
+  font-family: "Arial, Helvetica, sans-serif";
+  /*padding porque al tener un div con width del 50% no puedo centrarlo bien sin el padding*/
+  padding: 1% 5%;
+  /*separo los divs equidistantemente en el eje X*/
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: justify;
+  line-height: 1.6;
+  background-color: white;
+  color: #31AFB4;
+  padding-bottom: 5%;
+}
+#contacto h2 {
+  padding: 3%;
+}
+@media only screen and (max-width: 468px) {
+  #contacto h2 {
+    font-size: 1.1rem;
+  }
+}
+#contacto h3 {
+  padding: 5%;
+}
+@media only screen and (max-width: 468px) {
+  #contacto h3 {
+    font-size: 3vw;
+  }
+}
+#contacto div {
+  /*ancho del 50% del contenedor para que tengan el mismo ancho cada div*/
+  width: 50%;
+  /*flexbox para centrar el contenido*/
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-size: 1.4vw;
+  /* Font size en mobile */
+}
+#contacto div ul {
+  list-style: none;
+}
+#contacto div ul li {
+  padding: 0.5vw;
+}
+@media only screen and (max-width: 468px) {
+  #contacto div {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 468px) {
+  #contacto div {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+#contacto .contacto-mapa iframe {
+  padding: 0% 10%;
+}
+
+/* PREGUNTAS FREC ------------------------------------------------- */
+.contenido-preg {
+  /* quiero que el input seleccionado se quede cambiado de color */
+}
+@media only screen and (max-width: 468px) {
+  .contenido-preg {
+    height: 100vh;
+  }
+}
+.contenido-preg .vtabs {
+  /* posiciono mi clase vtabs para que quede verticalmente del lado izq */
+  max-width: 80vw;
+  padding: 20px;
+  margin: 50px auto;
+  position: relative;
+}
+.contenido-preg .vtabs input {
+  /* escondo el input para que no aparezca el check */
+  display: none;
+}
+.contenido-preg .vtabs label {
+  /* label es en linea pero quiero que ocupe el 100% del ancho → display block*/
+  display: block;
+  width: 20%;
+  padding: 15px;
+  /* caracteristica de la fuente */
+  font-weight: 700;
+  font-size: 1.8vw;
+  font-family: "Montserrat", sans-serif;
+  color: #31AFB4;
+  /* resalto el borde izquierdo */
+  border-left: 5px solid #31AFB4;
+}
+.contenido-preg .vtabs label:hover {
+  /* al posicionar el mouse en una label quiero que cambie de color */
+  cursor: pointer;
+  color: purple;
+}
+.contenido-preg .vtabs input:checked + label {
+  color: purple;
+  border-left: 5px solid purple;
+}
+.contenido-preg .vtabs #tab1:checked ~ .vtab-content #content1,
+.contenido-preg .vtabs #tab2:checked ~ .vtab-content #content2,
+.contenido-preg .vtabs #tab3:checked ~ .vtab-content #content3,
+.contenido-preg .vtabs #tab4:checked ~ .vtab-content #content4 {
+  display: block;
+}
+.contenido-preg .vtabs .vtab-content {
+  position: absolute;
+  top: 0px;
+  width: 50%;
+  left: 25vw;
+  color: purple;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw;
+  line-height: 2.5;
+  text-align: center;
+}
+.contenido-preg .vtabs .vtab-content h2 {
+  font-size: 1.8vw;
+  padding: 1.5%;
+}
+@media only screen and (max-width: 468px) {
+  .contenido-preg .vtabs .vtab-content h2 {
+    font-size: 0.9rem;
+  }
+}
+.contenido-preg .vtabs .vtab-content button {
+  margin-top: 3%;
+  background-color: purple;
+  padding: 1% 2%;
+  border: 2px solid black;
+}
+.contenido-preg .vtabs .vtab-content button a {
+  color: #31AFB4;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  text-decoration: none;
+}
+@media only screen and (max-width: 468px) {
+  .contenido-preg .vtabs .vtab-content {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}
+.contenido-preg .vtabs .vtab-content div {
+  display: none;
+}
+
+/* FIN PREGUNTAS FREC --------------------------------------------- */
+/* SERVICIOS */
+.contenido-servicios h1 {
+  padding: 3%;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+}
+.contenido-servicios img {
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 468px) {
+  .contenido-servicios .galeria-serv {
+    /* para centrar */
+    margin: 2%;
+  }
+  .contenido-servicios .galeria-serv div {
+    margin: 2%;
+  }
+}
+@media only screen and (min-width: 469px) and (max-width: 960px) {
+  .contenido-servicios .galeria-serv {
+    /* para centrar */
+    margin: 2%;
+  }
+  .contenido-servicios .galeria-serv div {
+    margin-bottom: 3%;
+  }
+}
+
+/* FIN SERVICIOS -------------------------------------------------- */
+/* FOOTER -------------------------------------------------------------- */
+footer {
+  /* el ancho y alto es acorde a la pantalla → uso vh y vw */
+  height: fit-content;
+  width: 100vw;
+  /* fuente */
+  color: white;
+  /* borde superior */
+  border-top: double 5px white;
+  position: absolute;
+  bottom: 0;
+}
+footer .footer-info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: wrap;
+  font-size: 0.8vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 468px) {
+  footer .footer-info {
+    font-size: 0.4rem;
+  }
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+@media only screen and (max-width: 468px) {
+  footer a {
+    font-size: 0.4rem;
+  }
+}
+footer a:hover {
+  color: blue;
+}
+
+/* FIN FOOTER ---------------------------------------------------------- */
+/* Reseteo */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  /* para scrollear más lento entre secciones */
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+.bg-blanco {
+  background-color: white;
+}
+.bg-blanco a {
+  color: #31AFB4;
+}
+
+.bg-verde {
+  background-color: #31AFB4;
+}
+
+html {
+  /* para referenciar el position del footer */
+  min-height: 100%;
+  position: relative;
+}
+
+.body-verde {
+  background-color: #31AFB4;
+  /*me queda la barra para scrollear horizontalmente y nose como sacarla ¿?*/
+  /*defino el ancho del contenedor mas grande como el 100 de la pantalla*/
+  max-width: 100%;
+}
+
+.body-blanco {
+  background-color: white;
+  /*me queda la barra para scrollear horizontalmente y nose como sacarla ¿?*/
+  /*defino el ancho del contenedor mas grande como el 100 de la pantalla*/
+  max-width: 100%;
+}
+
+/* estilo a las fuentes de los parrafos */
+
+/*# sourceMappingURL=style.css.map */

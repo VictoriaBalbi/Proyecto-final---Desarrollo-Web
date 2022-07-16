@@ -1,0 +1,37 @@
+/*Colores de la pagina*/
+$main_color_verde: #31AFB4; 
+$color_base: white;
+$color_secundario: purple;
+
+/*Mixin para flex*/
+
+@mixin  disp_flex($display, $justify, $wrap) {
+    display: $display;
+    justify-content: $justify;
+    flex-direction: $wrap;
+}
+
+/* Extends */
+/*Sintaxis: % + nombre { las propiedades } */
+
+// bolsita de propiedades para los h2
+%h2_standard{
+    font-family: $main_font;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+}; 
+
+%h3_standard{
+    font-family: $main_font;
+    font-style: italic;
+    font-size: 1.4vw;
+}; 
+
+/*Mapa*/
+
+// propiedades de un parrafo
+$parrafo: (
+    alineacion: justify,
+    interlineado: 1.6,
+); 
+

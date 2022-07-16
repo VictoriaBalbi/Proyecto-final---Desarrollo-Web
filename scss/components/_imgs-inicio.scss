@@ -1,0 +1,51 @@
+
+/*IMAGEN DE INICIO*/
+/*css para la imagen dentro de la seccion*/
+.imagen-inicio{
+  background-color: $color_base;
+  // Subtitulo - fuente
+    & subtitulo-imagen {
+      font-family: $main_font;
+      font-size: 4vw;
+      
+    }
+
+    // Subtitulo - animacion
+    & mov-left {
+      /* animacion para que el 1er titulo aparezca desde la izquierda */
+      animation: fromLeft 3s;
+      
+        @keyframes fromLeft {
+          0% {
+              opacity: 0;
+              /* negativos mueven hacia arriba */
+              transform: scale(1.5) translateX(-100%);
+            }
+            20% {
+              opacity: 1;
+            }
+            90% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            100% {
+              transform: translateZ(-1000em);
+            }
+      }
+    
+    }  
+
+  /* Ocultar imagen en mobile */
+  @media only screen and (max-width:468px){
+    display: none;
+  }
+}
+    
+
+
+
+
+
+
+
+/*FIN IMAGEN DE INICIO*/
