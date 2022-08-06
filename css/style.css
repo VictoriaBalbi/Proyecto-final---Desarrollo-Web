@@ -28,6 +28,7 @@ blanco: #FFFFFF
 /*Importo archivos de componentes de mi pag*/
 /*ESTILO DEL HEADER*/
 header {
+  border-bottom: #31AFB4 solid 2px;
   /*la clase informacion tiene los datos que quiero poner en la primer linea de la pag*/
   /* Agrandar el item del menu donde pongo el cursor */
 }
@@ -355,7 +356,7 @@ header .navbar-nav a:hover {
   padding: 3%;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: white;
+  color: purple;
   font-size: 3vw;
   text-align: center;
 }
@@ -365,26 +366,68 @@ header .navbar-nav a:hover {
   }
 }
 .contenido-servicios img {
-  width: 100%;
+  width: 50%;
   height: 100%;
 }
-@media only screen and (max-width: 468px) {
-  .contenido-servicios .galeria-serv {
-    /* para centrar */
-    margin: 2%;
-  }
-  .contenido-servicios .galeria-serv div {
-    margin: 2%;
-  }
+.contenido-servicios .container {
+  transform-style: preserve-3d;
 }
-@media only screen and (min-width: 469px) and (max-width: 960px) {
-  .contenido-servicios .galeria-serv {
-    /* para centrar */
-    margin: 2%;
-  }
-  .contenido-servicios .galeria-serv div {
-    margin-bottom: 3%;
-  }
+.contenido-servicios .container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.contenido-servicios .container .box .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+.contenido-servicios .container .box .body .imgContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.contenido-servicios .container .box .body .imgContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenido-servicios .container .box .body .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: purple;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+.contenido-servicios .container .box:hover .body {
+  transform: rotateY(180deg);
+}
+.contenido-servicios .container .box .body .content div {
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(45deg, purple, #31AFB4);
+  transform: translateZ(100px);
+}
+.contenido-servicios .container .box .body .content div h3 {
+  letter-spacing: 1px;
 }
 
 /* FIN SERVICIOS -------------------------------------------------- */
