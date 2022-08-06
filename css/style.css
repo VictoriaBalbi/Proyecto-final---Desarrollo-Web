@@ -98,6 +98,10 @@ header .navbar-nav a:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 4vw;
 }
+.imagen-inicio img {
+  height: 84vh;
+  width: 100vw;
+}
 .imagen-inicio mov-left {
   /* animacion para que el 1er titulo aparezca desde la izquierda */
   animation: fromLeft 3s;

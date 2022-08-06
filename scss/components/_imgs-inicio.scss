@@ -9,7 +9,10 @@
       font-size: 4vw;
       
     }
-
+    & img {
+      height: 84vh;
+      width: 100vw;
+    }
     // Subtitulo - animacion
     & mov-left {
       /* animacion para que el 1er titulo aparezca desde la izquierda */
