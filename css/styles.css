@@ -519,4 +519,8 @@ html {
   min-height: 100%;
 }
 
+.disclaimer {
+  display: none;
+}
+
 /*# sourceMappingURL=styles.css.map */
