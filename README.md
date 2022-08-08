@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Victoria</h1>
 <h3 align="center">A biomedical engineering student from Argentina</h3>
 
-- 🔭 I’m currently working on [Gramlab website](https://gramlab-junin.000webhostapp.com/)
+- 🔭 I’m currently working on [Gramlab website](https://laboratoriogramlab.000webhostapp.com/)
 
 - 🌱 I’m currently learning **HTML, CSS & SCSS**
 
